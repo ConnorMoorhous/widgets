@@ -1,13 +1,8 @@
-body {
+.cm-widgets-yt-channel {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
-}
-
-.widget {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0;
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -15,7 +10,7 @@ body {
 }
 
 /* Channel Info Styles */
-.channel-info {
+.cm-widgets-yt-channel .channel-info {
     display: flex;
     align-items: center;
     padding: 32px 80px 40px;
@@ -23,7 +18,7 @@ body {
     gap: 16px;
 }
 
-.channel-logo {
+.cm-widgets-yt-channel .channel-logo {
     width: 48px;
     height: 48px;
     background-color: #ffc107;
@@ -37,7 +32,7 @@ body {
     margin-right: 16px;
 }
 
-.channel-link {
+.cm-widgets-yt-channel .channel-link {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -45,30 +40,30 @@ body {
     flex-grow: 1;
 }
 
-.channel-link:hover .channel-name {
+.cm-widgets-yt-channel .channel-link:hover .channel-name {
     text-decoration: underline;
 }
 
-.channel-details {
+.cm-widgets-yt-channel .channel-details {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.channel-name {
+.cm-widgets-yt-channel .channel-name {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
 }
 
-.channel-stats {
+.cm-widgets-yt-channel .channel-stats {
     font-size: 14px;
     color: #606060;
     margin: 4px 0 0;
     white-space: nowrap;
 }
 
-.subscribe-button {
+.cm-widgets-yt-channel .subscribe-button {
     display: flex;
     align-items: center;
     background-color: #cc0000;
@@ -81,18 +76,18 @@ body {
     transition: background-color 0.2s;
 }
 
-.subscribe-button:hover {
+.cm-widgets-yt-channel .subscribe-button:hover {
     background-color: #a00000;
 }
 
-.youtube-icon {
+.cm-widgets-yt-channel .youtube-icon {
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
 
 /* Videos Container Styles */
-.videos-container {
+.cm-widgets-yt-channel .videos-container {
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -100,25 +95,25 @@ body {
     gap: 20px;
 }
 
-.videos-wrapper {
+.cm-widgets-yt-channel .videos-wrapper {
     flex-grow: 1;
     overflow: hidden;
 }
 
-.videos-slider {
+.cm-widgets-yt-channel .videos-slider {
     display: flex;
     transition: transform 0.3s ease;
     gap: 16px;
 }
 
 /* Video Item Styles */
-.video-item {
+.cm-widgets-yt-channel .video-item {
     flex: 0 0 calc((100% - 32px) / 3);
     box-sizing: border-box;
     cursor: pointer;
 }
 
-.video-thumbnail {
+.cm-widgets-yt-channel .video-thumbnail {
     width: 100%;
     padding-top: 56.25%;
     position: relative;
@@ -128,7 +123,7 @@ body {
     overflow: hidden;
 }
 
-.video-thumbnail::after {
+.cm-widgets-yt-channel .video-thumbnail::after {
     content: '';
     position: absolute;
     top: 0;
@@ -139,11 +134,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.video-item:hover .video-thumbnail::after {
+.cm-widgets-yt-channel .video-item:hover .video-thumbnail::after {
     background-color: rgba(0,0,0,0.1);
 }
 
-.play-button {
+.cm-widgets-yt-channel .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -160,12 +155,12 @@ body {
     z-index: 2;
 }
 
-.video-item:hover .play-button {
+.cm-widgets-yt-channel .video-item:hover .play-button {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.play-button::before {
+.cm-widgets-yt-channel .play-button::before {
     content: '';
     width: 0;
     height: 0;
@@ -175,11 +170,11 @@ body {
     margin-left: 4px;
 }
 
-.video-info {
+.cm-widgets-yt-channel .video-info {
     padding: 8px 0;
 }
 
-.video-title {
+.cm-widgets-yt-channel .video-title {
     font-size: 14px;
     font-weight: bold;
     margin: 0 0 4px 0;
@@ -194,18 +189,18 @@ body {
     transition: color 0.3s ease;
 }
 
-.video-item:hover .video-title {
+.cm-widgets-yt-channel .video-item:hover .video-title {
     color: #cc0000;
 }
 
-.video-date {
+.cm-widgets-yt-channel .video-date {
     font-size: 12px;
     color: #666;
     margin: 0;
 }
 
 /* Navigation Button Styles */
-.nav-button {
+.cm-widgets-yt-channel .nav-button {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
@@ -224,18 +219,18 @@ body {
     box-sizing: border-box;
 }
 
-.nav-button:hover {
+.cm-widgets-yt-channel .nav-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.nav-button svg {
+.cm-widgets-yt-channel .nav-button svg {
     width: 24px;
     height: 24px;
     fill: white;
 }
 
 /* Modal Styles */
-.modal {
+.cm-widgets-yt-channel-modal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,13 +246,13 @@ body {
     transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal.active {
+.cm-widgets-yt-channel-modal.active {
     background-color: rgba(0,0,0,0.8);
     opacity: 1;
     visibility: visible;
 }
 
-.modal-content {
+.cm-widgets-yt-channel-modal-content {
     position: relative;
     width: 90%;
     max-width: 800px;
@@ -266,12 +261,12 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.modal.active .modal-content {
+.cm-widgets-yt-channel-modal.active .cm-widgets-yt-channel-modal-content {
     opacity: 1;
     transform: scale(1);
 }
 
-#videoPlayerWrapper {
+.cm-widgets-yt-channel [id="videoPlayerWrapper"] {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
@@ -279,7 +274,7 @@ body {
     background-color: #000;
 }
 
-#videoPlayer {
+.cm-widgets-yt-channel [id="videoPlayer"] {
     position: absolute;
     top: 0;
     left: 0;
@@ -287,7 +282,7 @@ body {
     height: 100%;
 }
 
-.close {
+.cm-widgets-yt-channel .close {
     position: absolute;
     right: 0px;
     top: -38px;
@@ -300,38 +295,38 @@ body {
     z-index: 1002;
 }
 
-.close:hover {
+.cm-widgets-yt-channel .close:hover {
     color: #ffffff;
 }
 
-.close svg {
+.cm-widgets-yt-channel .close svg {
     width: 28px;
     height: 28px;
 }
 
 /* Placeholder Navigation Button Styles */
-.placeholder-nav-button {
+.cm-widgets-yt-channel .placeholder-nav-button {
     background-color: #e0e0e0;
 }
 
-.placeholder-nav-button svg {
+.cm-widgets-yt-channel .placeholder-nav-button svg {
     display: none;
 }
 
 /* Override any user agent stylesheet */
-.nav-button::-moz-focus-inner {
+.cm-widgets-yt-channel .nav-button::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
 
 /* Placeholder Styles */
-.channel-info-placeholder {
+.cm-widgets-yt-channel .channel-info-placeholder {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.placeholder-avatar {
+.cm-widgets-yt-channel .placeholder-avatar {
     width: 48px;
     height: 48px;
     background-color: #e0e0e0;
@@ -340,26 +335,26 @@ body {
     flex-shrink: 0;
 }
 
-.channel-details {
+.cm-widgets-yt-channel .channel-details {
     flex-grow: 1;
 }
 
-.placeholder-line {
+.cm-widgets-yt-channel .placeholder-line {
     height: 14px;
     background-color: #e0e0e0;
     border-radius: 4px;
 }
 
-.channel-name-placeholder {
+.cm-widgets-yt-channel .channel-name-placeholder {
     width: 150px;
     margin-bottom: 4px;
 }
 
-.channel-stats-placeholder {
+.cm-widgets-yt-channel .channel-stats-placeholder {
     width: 100px;
 }
 
-.placeholder-subscribe-button {
+.cm-widgets-yt-channel .placeholder-subscribe-button {
     width: 100px;
     height: 36px;
     background-color: #e0e0e0;
@@ -368,12 +363,12 @@ body {
     margin-left: 16px;
 }
 
-.video-item-placeholder {
+.cm-widgets-yt-channel .video-item-placeholder {
     flex: 0 0 calc((100% - 32px) / 3);
     box-sizing: border-box;
 }
 
-.video-thumbnail-placeholder {
+.cm-widgets-yt-channel .video-thumbnail-placeholder {
     width: 100%;
     padding-top: 56.25%; /* 16:9 aspect ratio */
     background-color: #e0e0e0;
@@ -381,33 +376,33 @@ body {
     margin-bottom: 8px;
 }
 
-.video-info-placeholder {
+.cm-widgets-yt-channel .video-info-placeholder {
     padding: 8px 0;
 }
 
-.video-info-placeholder .placeholder-line {
+.cm-widgets-yt-channel .video-info-placeholder .placeholder-line {
     height: 14px;
     background-color: #e0e0e0;
     border-radius: 4px;
     margin-bottom: 4px;
 }
 
-.video-info-placeholder .placeholder-line:first-child {
+.cm-widgets-yt-channel .video-info-placeholder .placeholder-line:first-child {
     width: 70%;
 }
 
-.video-info-placeholder .placeholder-line:last-child {
+.cm-widgets-yt-channel .video-info-placeholder .placeholder-line:last-child {
     width: 40%;
 }
 
 /* Pagination Styles */
-.pagination {
+.cm-widgets-yt-channel .pagination {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-.page-indicator {
+.cm-widgets-yt-channel .page-indicator {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -416,7 +411,7 @@ body {
     cursor: pointer;
 }
 
-.page-indicator.active {
+.cm-widgets-yt-channel .page-indicator.active {
     background-color: #333;
 }
 
@@ -429,7 +424,7 @@ body {
     }
 }
 
-.animated-background {
+.cm-widgets-yt-channel .animated-background {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -442,19 +437,19 @@ body {
 }
 
 /* Channel Info Placeholder Styles */
-.placeholder-avatar,
-.placeholder-line,
-.placeholder-subscribe-button,
-.video-thumbnail-placeholder,
-.placeholder-nav-button {
+.cm-widgets-yt-channel .placeholder-avatar,
+.cm-widgets-yt-channel .placeholder-line,
+.cm-widgets-yt-channel .placeholder-subscribe-button,
+.cm-widgets-yt-channel .video-thumbnail-placeholder,
+.cm-widgets-yt-channel .placeholder-nav-button {
     background-color: #e0e0e0;
 }
 
-.animated-background {
+.cm-widgets-yt-channel .animated-background {
     overflow: hidden;
 }
 
-.animated-background::before {
+.cm-widgets-yt-channel .animated-background::before {
     content: "";
     position: absolute;
     top: 0;
@@ -466,8 +461,8 @@ body {
 }
 
 /* Video Item Placeholder Styles */
-.video-item-placeholder .video-thumbnail-placeholder,
-.video-item-placeholder .placeholder-line {
+.cm-widgets-yt-channel .video-item-placeholder .video-thumbnail-placeholder,
+.cm-widgets-yt-channel .video-item-placeholder .placeholder-line {
     position: relative;
     overflow: hidden;
 }
