@@ -1,6 +1,7 @@
 export class YouTubeChannelWidget {
-    constructor(containerId, data = null) {
+    constructor(containerId, basePath = '', data = null) {
         this.containerId = containerId;
+        this.basePath = basePath;
         this.currentIndex = 0;
         this.totalVideos = 0;
         this.player = null;
@@ -21,7 +22,7 @@ export class YouTubeChannelWidget {
     }
 
     async injectCSS() {
-        const response = await fetch('styles.css');
+        const response = await fetch(`${this.basePath}styles.css`);
         const css = await response.text();
         const style = document.createElement('style');
         style.textContent = css;
@@ -29,7 +30,7 @@ export class YouTubeChannelWidget {
     }
 
     async injectHTML() {
-        const response = await fetch('widget.html');
+        const response = await fetch(`${this.basePath}widget.html`);
         const html = await response.text();
 
         const container = document.getElementById(this.containerId);
@@ -48,8 +49,8 @@ export class YouTubeChannelWidget {
 
     update(data) {
         this.currentIndex = 0;
-        this.totalVideos = data.videos.length;
         this.updateHeader(data.channel);
+        this.totalVideos = data.videos.length;
         this.updateVideoSlider(data.videos);
     }
 
