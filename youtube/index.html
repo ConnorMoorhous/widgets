@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channel Widget</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="widget">
+    <div class="channel-info" id="channelInfo">
+        <div class="channel-info-placeholder">
+            <div class="channel-logo placeholder-avatar animated-background"></div>
+            <div class="channel-details">
+                <div class="placeholder-line channel-name-placeholder animated-background"></div>
+                <div class="placeholder-line channel-stats-placeholder animated-background"></div>
+            </div>
+            <div class="placeholder-subscribe-button animated-background"></div>
+        </div>
+    </div>
+    <div class="videos-container">
+        <button id="prevButton" class="nav-button placeholder-nav-button animated-background">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+        </button>
+        <div class="videos-wrapper">
+            <div class="videos-slider" id="videosSlider">
+                <div class="video-item-placeholder">
+                    <div class="video-thumbnail-placeholder animated-background"></div>
+                    <div class="video-info-placeholder">
+                        <div class="placeholder-line animated-background"></div>
+                        <div class="placeholder-line animated-background"></div>
+                    </div>
+                </div>
+                <div class="video-item-placeholder">
+                    <div class="video-thumbnail-placeholder animated-background"></div>
+                    <div class="video-info-placeholder">
+                        <div class="placeholder-line animated-background"></div>
+                        <div class="placeholder-line animated-background"></div>
+                    </div>
+                </div>
+                <div class="video-item-placeholder">
+                    <div class="video-thumbnail-placeholder animated-background"></div>
+                    <div class="video-info-placeholder">
+                        <div class="placeholder-line animated-background"></div>
+                        <div class="placeholder-line animated-background"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="nextButton" class="nav-button placeholder-nav-button animated-background">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+    </div>
+    <div class="pagination" id="pagination">
+        <!-- Pagination indicators will be populated here -->
+    </div>
+</div>
+
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <button class="close" aria-label="Close video">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div id="videoPlayerWrapper">
+            <div id="videoPlayer"></div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
